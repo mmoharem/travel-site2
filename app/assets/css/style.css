@@ -1,8 +1,10 @@
 * {
-    margin: 0;
-    padding-left: 0;
+    font-family: 'Roboto';
+    color: red;
+    font-size: 35px;
 }
 
-html {
-    box-sizing: border-box;
+img {
+    max-width: 80%;
+    height: auto;
 }
