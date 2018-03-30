@@ -3,7 +3,10 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     simplVars = require('postcss-simple-vars'),
-    nested = require('postcss-nested');
+    nested = require('postcss-nested'),
+    autoReload = require('gulp-auto-reload'),
+    webServer = require('gulp-webserver'),
+    postcssImport = require('postcss-import');
 
 
 //creat gulp default task
@@ -25,8 +28,8 @@ gulp.task('styles', function() {
     // console.log("Imagine Sass or PostCSS tasks runing here.");
 
     // Creat gulp.src & pip gulp.dest
-    return gulp.src('./app/assets/css/style.css') //we use return because gulp.src is a syncronas function
-        .pipe(postcss([autoprefixer, simplVars, nested]))
+    return gulp.src('./app/css/style.css') //we use return because gulp.src is a syncronas function
+        .pipe(postcss([webServer, autoReload, postcssImport, simplVars, nested, autoprefixer]))
         .pipe(gulp.dest('./app/temp/styles'));
 
 
@@ -47,7 +50,7 @@ gulp.task('watch', function() {
     });
 
     // CSS-watch.
-    watch('./app/assets/css/style.css', function() {
+    watch('./app/css/style.css', function() {
         gulp.start('styles');
     });
 
