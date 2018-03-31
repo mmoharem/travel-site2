@@ -1,3 +1,8 @@
+
+html {
+  font-size: 62.5%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #333;
@@ -8,5 +13,3 @@ img {
     max-width: 100%;
     /* height: auto; */
 }
-
-@import "modules/_large-hero";

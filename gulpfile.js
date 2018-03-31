@@ -4,33 +4,53 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     simplVars = require('postcss-simple-vars'),
     nested = require('postcss-nested'),
-    autoReload = require('gulp-auto-reload'),
-    webServer = require('gulp-webserver'),
+    connect = require('gulp-connect'),
     postcssImport = require('postcss-import');
 
 
-//creat gulp default task
-gulp.task('default', function() {
-    console.log("Hooray - you created a Gulp task.");
-}); //Use ($gulp) to run default task.
 
 
 
-//new task.   //For html
-gulp.task('html', function() {
-    console.log("New Gulp task");
-}); //Use ($gulp taskName(html)) to run any task.
+//////////////////////////////
+///////...connect........////
+gulp.task('connect', function(){
+  connect.server({
+
+
+      livereload: true
+  });
+});
+    //   ..creat gulp ... Connect ... task
+// gulp.task('connect', connect.server({
+//     root: [outputDir],
+//     open: { browser: 'Google Chrome' }
+// }));
 
 
 
-//new task.   //for css
+//new task.   //------->..For html
+gulp.task('html', function () {
+
+    gulp.src('./app/*.html')
+        .pipe(gulp.dest('./app'))
+        .pipe(connect.reload());
+
+});
+
+
+
+
+
+//new task.   //------>..for css
 gulp.task('styles', function() {
     // console.log("Imagine Sass or PostCSS tasks runing here.");
 
     // Creat gulp.src & pip gulp.dest
-    return gulp.src('./app/css/style.css') //we use return because gulp.src is a syncronas function
-        .pipe(postcss([webServer, autoReload, postcssImport, simplVars, nested, autoprefixer]))
+    return gulp.src('./app/assets/css/main.css') //we use return because gulp.src is a syncronas function
+        .pipe(connect.reload())
+        .pipe(postcss([postcssImport, simplVars, nested, autoprefixer]))
         .pipe(gulp.dest('./app/temp/styles'));
+
 
 
 }); //Use ($gulp taskName(html)) to run any task.
@@ -47,11 +67,15 @@ gulp.task('watch', function() {
     // HTML-watch.
     watch('./app/index.html', function() {
         gulp.start('html');
+
     });
 
     // CSS-watch.
-    watch('./app/css/style.css', function() {
+  return watch(['./app/assets/css/main.css', './app/assets/css/_var.css', './app/assets/css/_global.css', './app/assets/css/_large-hero.css'], function() {
         gulp.start('styles');
+        // gulp.start('connect');
     });
 
 });
+
+gulp.task('default', ['connect', 'watch']);

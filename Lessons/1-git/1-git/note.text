@@ -1,0 +1,19 @@
+1-
+
+
+
+
+2- $pwd
+ - cd [directory name and path]
+
+3- $mkdir ["new dir"]
+
+
+4- $git remot -v
+ - $git remote set-url origin https://git.........
+ - $git push origin master.
+
+ 5- $git status
+  - $git add -A
+  - $git commit -m 'note or message'
+  - $git push origin master.
