@@ -1,0 +1,61 @@
+.our-features {
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 300;
+        text-align: center;
+
+        @mixin atSmall {
+            font-size: 6rem;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+    }
+
+    &__icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.2rem;
+        @mixin atSmall{
+            display: inline-block;
+            margin-left: 0;
+            margin-right: .5rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &__item {
+
+        position: relative;
+        margin-top: 5rem;
+        @mixin atSmall {
+            padding-left: 9rem;
+        }
+        &--icon {
+            display: block;
+            margin: 0 auto;
+            width: 6rem;
+            height: 5.5rem;
+            @mixin atSmall{
+                display: inline-block;
+                margin: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        h3 {
+            text-align: center;
+            padding-top: 3rem;
+            font-size: 2.4rem;
+            font-weight: 400;
+            @mixin atSmall{
+                text-align: left;
+            }
+        }
+    }
+}

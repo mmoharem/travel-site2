@@ -1,13 +1,30 @@
 .row {
-    width: 100%;
-    /* box-sizing: border-box; */
-
-    & > *:not(:last-child) {
-        box-sizing: border-box;
-        @mixin atSmall {
-            padding-right: 5rem;
+    /* width: 100%; */
+    box-sizing: border-box;
+    &--gutter {
+        & > * {
+                @mixin atSmall {
+                padding-right: 5rem;
+            }
         }
     }
+
+    &--gutter-large {
+        /* margin-right: -3.5rem;        */
+            & > * {
+                margin-left: $margin-small;
+                @mixin atSmall {
+                margin-left: $margin-large;
+            }
+        }
+    }
+    &--r-margin {
+        margin-right: $margin-small;
+        @mixin atSmall {
+        margin-right: $margin-large;
+    }
+
+        }
     &::after {
         @mixin clearFix;
     }
@@ -28,6 +45,15 @@
             }
         }
     }
+
+    &__6 {
+
+        @mixin atSmall{
+            float: left;
+            width: calc(50% - 8rem);
+            }
+
+        }
 
     &__8 {
         float: left;
