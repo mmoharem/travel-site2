@@ -1,0 +1,51 @@
+.row {
+    width: 100%;
+    /* box-sizing: border-box; */
+
+    & > *:not(:last-child) {
+        box-sizing: border-box;
+        @mixin atSmall {
+            padding-right: 5rem;
+        }
+    }
+    &::after {
+        @mixin clearFix;
+    }
+
+    &__4 {
+        float: left;
+        width: 100%;
+
+        /* width: calc(100% - (7 / 12 * 100)); */
+        @mixin atSmall {
+            width: 33.33%;
+        }
+        &--large {
+            width: 100%;
+            /* width: calc(100% - (7 / 12 * 100)); */
+            @mixin atSmall {
+                width: 40%;
+            }
+        }
+    }
+
+    &__8 {
+        float: left;
+        width: 100%;
+        /* width: calc(100% - (4 / 12 * 100)); */
+        @mixin atSmall {
+            width: 66%;
+        }
+        &--large {
+            width: 100%;
+            /* width: calc(100% - (5 / 12 * 100)); */
+            @mixin atSmall {
+                width: 60%;
+            }
+        }
+
+        &--medium-t-marg {
+            margin-top: 1.5rem;
+        }
+    }
+}

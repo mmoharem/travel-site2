@@ -5,7 +5,8 @@ autoprefixer = require('autoprefixer'),
 simplVars = require('postcss-simple-vars'),
 nested = require('postcss-nested'),
 postcssImport = require('postcss-import'),
-mixins = require('postcss-mixins');
+mixins = require('postcss-mixins'),
+calc = require('postcss-calc');
 
 
 
@@ -17,7 +18,7 @@ gulp.task('styles', function() {
     // Creat gulp.src & pip gulp.dest
     return gulp.src('./app/assets/css/main.css') //we use return because gulp.src is a syncronas function
         // .pipe(connect.reload())
-        .pipe(postcss([postcssImport, mixins, simplVars, nested, autoprefixer]))
+        .pipe(postcss([postcssImport, calc, mixins, simplVars, nested, autoprefixer]))
         .on('error' , function(errorInfo){
                console.log(errorInfo.toString());
                this.emit('end');

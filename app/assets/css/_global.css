@@ -9,12 +9,16 @@
     /*to prevent adding border and margin to the total width*/
 }
 html {
-  font-size: 62.5%;
+
+    font-size: 62.5%;
 }
 
 body {
     box-sizing: border-box;
+    font-size: 1.6rem;
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
     color: #333;
     width: 100%;
     box-sizing: border-box;

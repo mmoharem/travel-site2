@@ -5,4 +5,20 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    &--medium {
+        max-width: 980px;
+    }
+
+    &--b-margin {
+
+        margin-bottom: 3.5rem;
+        @mixin atSmall {
+             margin-bottom: 5rem;
+        }
+    }
 }

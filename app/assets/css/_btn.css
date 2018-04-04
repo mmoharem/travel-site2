@@ -8,7 +8,7 @@
   display: inline-block;
 
   &--orange {
-    background-color: $main-orang-color;
+    background-color: $main-orange-color;
   }
 
   &--large {

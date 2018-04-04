@@ -1,14 +1,58 @@
 .headline {
+    line-height: 1.4;
     font-weight: 300;
-    font-size: 3.2rem;
-    text-transform: uppercase;
+    font-size: 3.4rem;
+    /* text-transform: uppercase; */
     color: $main-blue-color;
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
+
+    @_mixin atSmall {
+        margin-top: 2rem;
+    }
 
     &--center{
         text-align: center;
     }
 
     &--orange{
-        color: $oran
+        color: $main-orange-color;
+    }
+
+    &--small {
+        font-size: 2.3rem;
+    }
+
+    &--narrow {
+        max-width: 50rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &--b-margin-small {
+        margin-bottom: .5em;
+    }
+
+    &--b-margin-large {
+        margin-bottom: 1.6em;
+    }
+
+    &--no-t-margin {
+        margin-top: 0;
+    }
+}
+
+
+.paragraph {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-top: 2.4rem;
+    &:not(:last-child){
+
+    }
+
+    a {
+        font-weight: 700;
+        color: $main-orange-color;
     }
 }
