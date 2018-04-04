@@ -17,3 +17,10 @@
   - $git add -A
   - $git commit -m 'note or message'
   - $git push origin master.
+
+
+  7- $git branch
+   - $git add -A //add files to staging status
+   - &git reset [filename]  //remove file from staging area
+   - &git branch branchName  //creat new branchName
+   - &git checkout branchName  // switch to branch
