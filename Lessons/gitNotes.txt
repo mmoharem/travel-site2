@@ -1,0 +1,35 @@
+1-
+
+
+
+
+2- $pwd
+ - cd [directory name and path]
+
+3- $mkdir ["new dir"]
+
+
+4- $git remot -v
+ - $git remote set-url origin https://git.........
+ - $git push origin master.
+
+ 5- $git status
+  - $git add -A
+  - $git commit -m 'note or message'
+  - $git push origin master.
+
+
+  7- $git branch
+   - $git add -A //add files to staging status
+   - &git reset [filename]  //remove file from staging area
+   - &git branch newbranchName  //creat new branch
+   - &git checkout newbranchName  // switch to branch
+
+  8- after commit all changes to branch change again to master branch then
+   - git merge newbranchName // merge newbranchName changes to master newbranchName
+   - you can use github to merge the branches.
+   - **(commit and stage at the same time ) $git commit -am 'jjjjjj'
+   - $git branch -d newbranchName // delete the branch
+
+  9- $git pull origin master  //to pull the repo from github to pc
+   - $git checkout -b newbranchName // creat and switch to branch with one command
