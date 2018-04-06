@@ -26,7 +26,12 @@ gulp.task('watch', function() {
     });
 
     // CSS-watch.
-    watch(['./app/assets/css/main.css', './app/assets/css/_variables.css', './app/assets/css/_mixins.css', './app/assets/css/_global.css', './app/assets/css/_page-section.css', './app/assets/css/_wrapper.css', './app/assets/css/_row.css', './app/assets/css/_typography.css', './app/assets/css/_btn.css', './app/assets/css/_large-hero.css', './app/assets/css/_our-features.css'], function() {
+    watch(['./app/assets/css/main.css', './app/assets/css/_variables.css', './app/assets/css/_mixins.css'
+    , './app/assets/css/_global.css', './app/assets/css/_page-section.css', './app/assets/css/_wrapper.css'
+    , './app/assets/css/_row.css', './app/assets/css/_typography.css', './app/assets/css/_btn.css'
+    , './app/assets/css/_large-hero.css', './app/assets/css/_our-features.css', './app/assets/css/_testimonials.css'
+    , './app/assets/css/_sprite.css', './app/assets/css/_footer.css', './app/assets/css/_header.css'], function() {
+
         // gulp.start('styles');
         gulp.start('cssInject');
         // gulp.start('connect');

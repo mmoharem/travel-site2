@@ -12,7 +12,7 @@
 
 <body class="container">
     <!-- //..HEADER.. -->
-    <header>
+    <header class="header">
         <img src="assets/images/icons/clear-view-escapes.svg">
         <a href="#" class="btn">Get in Touch</a>
         <nav>
@@ -68,9 +68,9 @@
     </div>
 
     <!-- //..OUR-FEATURES..// -->
-    <div id="features" class="page-section page-section__blue wrapper--no-side-padding">
+    <div id="features" class="our-features page-section page-section__blue wrapper--no-side-padding">
 
-        <h2 class="our-features__title"><img src="assets/images/icons/star.svg" class="our-features__icon"> Our <strong>Features</strong></h2>
+        <h2 class="our-section__title"><span class="icon icon--star our-section__icon"></span> Our <strong>Features</strong></h2>
         <div class="row row--gutter-large row--r-margin">
             <div class="row__6">
                 <div class="our-features__item">
@@ -106,32 +106,54 @@
         </div>
 
     <!-- //..TESTIMONIALS.. -->
-    <div id="testimonials">
-        <img src="assets/images/icons/comment.svg">
-        <h2>Real Testimonials</h2>
+    <div id="testimonials" class="testimonials page-section">
+        <div class="wrapper">
 
-        <img src="assets/images/testimonial-jane.jpg">
-        <h3>Jane Doe</h3>
-        <h3>9 Time Escaper</h3>
-        <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&rdquo;</p>
+            <h2 class="our-section__title our-section__blue"><img src="assets/images/icons/comment.svg" class="our-section__icon"><strong>Real Testimonials</stromg></h2>
 
-        <img src="assets/images/testimonial-john.jpg">
-        <h3>John Smith</h3>
-        <h3>4 Time Escaper</h3>
-        <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
-            amet, consectetur.&rdquo;</p>
-
-        <img src="assets/images/testimonial-cat.jpg">
-        <h3>Cat McKitty</h3>
-        <h3>6 Time Escaper</h3>
-        <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.&rdquo;</p>
+            <div class="row row--flex row--gutter-medium row--r-margin page-section page-section__large-t-margin ">
+                <div class="row__4--medium">
+                    <div class="testimonials-block">
+                        <div class="testimonials-block__image">
+                            <img src="assets/images/testimonial-jane.jpg">
+                        </div>
+                        <h3 class="testimonials-block__title">Jane Doe</h3>
+                        <h4 class="testimonials-block__subtitle">9 Time Escaper</h4>
+                        <p class="paragraph">&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+                            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&rdquo;</p>
+                    </div>
+                </div>
+                <div class="row__4--medium">
+                    <div class="testimonials-block">
+                        <div class="testimonials-block__image">
+                            <img src="assets/images/testimonial-john.jpg">
+                        </div>
+                        <h3 class="testimonials-block__title">John Smith</h3>
+                        <h4 class="testimonials-block__subtitle">4 Time Escaper</h4>
+                        <p class="paragraph">&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+                            amet, consectetur.&rdquo;</p>
+                    </div>
+                </div>
+                <div class="row__4--medium">
+                    <div class="testimonials-block">
+                        <div class="testimonials-block__image">
+                            <img src="assets/images/testimonial-cat.jpg">
+                        </div>
+                        <h3 class="testimonials-block__title">Cat McKitty</h3>
+                        <h4 class="testimonials-block__subtitle">6 Time Escaper</h4>
+                        <p class="paragraph">&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+                            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.&rdquo;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <footer>
-        <p>Copyright &copy; 2016 Clear View Escapes. All rights reserved.
+    <footer class="footer">
+        <div class="wrapper">
+        <p><span class="footer__text">Copyright &copy; 2016 Clear View Escapes. All rights reserved.</span>
           <a href="#" class="btn btn--orange">Get in Touch</a></p>
+      </div>
     </footer>
 </body>
 

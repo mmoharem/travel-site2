@@ -1,0 +1,5 @@
+.header {
+    background-color: rgba(47,85,114, .4);
+    position: absolute;
+    z-index: 10;
+}

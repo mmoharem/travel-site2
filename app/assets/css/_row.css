@@ -4,9 +4,19 @@
     &--gutter {
         & > * {
                 @mixin atSmall {
-                padding-right: 5rem;
+                margin-left: 5rem;
             }
         }
+    }
+
+    &--gutter-medium {
+
+            & > * {
+                margin: 0;
+                @mixin atSmall {
+                margin-left: $margin-medium;
+                }
+            }
     }
 
     &--gutter-large {
@@ -15,8 +25,8 @@
                 margin-left: $margin-small;
                 @mixin atSmall {
                 margin-left: $margin-large;
+                }
             }
-        }
     }
     &--r-margin {
         margin-right: $margin-small;
@@ -36,6 +46,14 @@
         /* width: calc(100% - (7 / 12 * 100)); */
         @mixin atSmall {
             width: 33.33%;
+        }
+
+        &--medium {
+            float: left;
+            width: 100%;
+            @mixin atSmall {
+                width: calc(33.33% - 4rem);
+            }
         }
         &--large {
             width: 100%;
@@ -72,6 +90,20 @@
 
         &--medium-t-marg {
             margin-top: 1.5rem;
+        }
+    }
+
+    /* /////egual height.. */
+
+    &--flex {
+        @mixin atSmall{
+        /* background-color: red; */
+        display: flex;
+        /* flex-direction: column; */
+        }
+        & > * {
+            float: none;
+            display: flex;
         }
     }
 }

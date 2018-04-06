@@ -1,4 +1,4 @@
-.our-features {
+.our-section {
 
     &__title {
         font-size: 4rem;
@@ -8,10 +8,14 @@
         @mixin atSmall {
             font-size: 6rem;
         }
+    }
 
-        strong {
+    &__blue {
+        color: $main-blue-color;
+    }
+
+    strong {
             font-weight: 600;
-        }
     }
 
     &__icon {
@@ -20,19 +24,26 @@
         margin-right: auto;
         margin-bottom: 1.2rem;
         @mixin atSmall{
+            position: relative;
+            top: 1rem;
             display: inline-block;
             margin-left: 0;
-            margin-right: .5rem;
+            margin-right: 2rem;
             margin-bottom: 0;
         }
     }
+}
+
+/* /////// */
+.our-features {
 
     &__item {
 
         position: relative;
-        margin-top: 5rem;
+
         @mixin atSmall {
             padding-left: 9rem;
+            margin-top: 7rem;
         }
         &--icon {
             display: block;

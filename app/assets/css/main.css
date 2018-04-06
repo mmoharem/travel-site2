@@ -9,5 +9,9 @@
 @import "_row";
 @import "_typography";
 @import "_btn";
+@import "_header";
 @import "_large-hero";
 @import "_our-features";
+@import "_testimonials";
+@import "_sprite";
+@import "_footer";

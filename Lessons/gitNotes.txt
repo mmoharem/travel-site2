@@ -33,3 +33,7 @@
 
   9- $git pull origin master  //to pull the repo from github to pc
    - $git checkout -b newbranchName // creat and switch to branch with one command
+
+  10- to escaping vim ----// press Esc then type (:wq) and press enter
+
+  11- $git merge newbranchName --no-ff // merge without fast forword history

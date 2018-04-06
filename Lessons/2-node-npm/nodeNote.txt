@@ -71,3 +71,13 @@ by addin (var gulp(anyVareName) = require('gulp) )
         console.log(errorInfo.toString());
         this.emit('end');
     });
+
+///////////////////////.............SPRIT..FILE....
+
+1- create file sprites.js
+2- require sprites.js in gulpfile.js
+3- add var gulp in sprites.js
+4- $npm install gulp-svg-sprite --save-dev
+5- to rename any file using gulp use gulp rename package
+ - $npm install gulp-rename --save-dev
+ //use [], to add any dependancy to run before the function
