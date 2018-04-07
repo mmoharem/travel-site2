@@ -1,0 +1,60 @@
+.header {
+
+    width: 100%;
+    padding: 0;
+
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @mixin atSmall {
+
+            background-color: rgba($main-blue-color, .4);
+            padding: 1rem 12rem;
+
+            justify-content: flex-end;
+    }
+
+
+
+
+    &__logo {
+
+
+        background-color: $main-blue-color;
+        padding: 1.5rem 2.5rem;
+        @mixin atSmall {
+            position: absolute;
+            left: 12rem;
+            top: 0;
+        }
+
+
+    }
+
+    &__btn {
+        display: none;
+        @mixin atSmall {
+            display: inline-block;
+        }
+    }
+
+    &__mob-menu--icon {
+
+        position: absolute;
+        right: 3rem;
+        background-color: #fff;
+        width: 2rem;
+        height: 2rem;
+
+
+
+        @mixin atSmall {
+            display: none;
+
+        }
+    }
+
+}

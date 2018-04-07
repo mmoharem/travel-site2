@@ -6,7 +6,8 @@ simplVars = require('postcss-simple-vars'),
 nested = require('postcss-nested'),
 postcssImport = require('postcss-import'),
 mixins = require('postcss-mixins'),
-calc = require('postcss-calc');
+calc = require('postcss-calc'),
+hexrgba = require('postcss-hexrgba');
 
 
 
@@ -18,7 +19,7 @@ gulp.task('styles', function() {
     // Creat gulp.src & pip gulp.dest
     return gulp.src('./app/assets/css/main.css') //we use return because gulp.src is a syncronas function
         // .pipe(connect.reload())
-        .pipe(postcss([postcssImport, calc, mixins, simplVars, nested, autoprefixer]))
+        .pipe(postcss([postcssImport, calc, mixins, simplVars, nested,hexrgba , autoprefixer]))
         .on('error' , function(errorInfo){
                console.log(errorInfo.toString());
                this.emit('end');

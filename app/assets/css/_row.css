@@ -1,0 +1,109 @@
+.row {
+    /* width: 100%; */
+    box-sizing: border-box;
+    &--gutter {
+        & > * {
+                @mixin atSmall {
+                margin-left: 5rem;
+            }
+        }
+    }
+
+    &--gutter-medium {
+
+            & > * {
+                margin: 0;
+                @mixin atSmall {
+                margin-left: $margin-medium;
+                }
+            }
+    }
+
+    &--gutter-large {
+        /* margin-right: -3.5rem;        */
+            & > * {
+                margin-left: $margin-small;
+                @mixin atSmall {
+                margin-left: $margin-large;
+                }
+            }
+    }
+    &--r-margin {
+        margin-right: $margin-small;
+        @mixin atSmall {
+        margin-right: $margin-large;
+    }
+
+        }
+    &::after {
+        @mixin clearFix;
+    }
+
+    &__4 {
+        float: left;
+        width: 100%;
+
+        /* width: calc(100% - (7 / 12 * 100)); */
+        @mixin atSmall {
+            width: 33.33%;
+        }
+
+        &--medium {
+            float: left;
+            width: 100%;
+            @mixin atSmall {
+                width: calc(33.33% - 4rem);
+            }
+        }
+        &--large {
+            width: 100%;
+            /* width: calc(100% - (7 / 12 * 100)); */
+            @mixin atSmall {
+                width: 40%;
+            }
+        }
+    }
+
+    &__6 {
+
+        @mixin atSmall{
+            float: left;
+            width: calc(50% - 8rem);
+            }
+
+        }
+
+    &__8 {
+        float: left;
+        width: 100%;
+        /* width: calc(100% - (4 / 12 * 100)); */
+        @mixin atSmall {
+            width: 66%;
+        }
+        &--large {
+            width: 100%;
+            /* width: calc(100% - (5 / 12 * 100)); */
+            @mixin atSmall {
+                width: 60%;
+            }
+        }
+
+        &--medium-t-marg {
+            margin-top: 1.5rem;
+        }
+    }
+
+    /* /////egual height.. */
+
+    &--flex {
+        @mixin atSmall{
+        /* background-color: red; */
+        display: flex;
+        /* flex-direction: column; */
+        }
+        & > * {
+            float: none;
+            display: flex;
+        }
+    }
+}
