@@ -13,7 +13,7 @@
 //.......................v3.0
 
 class Person {
-    constractor(fullName, favColor) {
+    constructor(fullName, favColor) {
         this.name = fullName;
         this.favoriteColor = favColor;
     }
@@ -23,4 +23,5 @@ class Person {
     }
 }
 
-module.exports = Person;
+//module.exports = Person; //using node exports
+export default Person; //using ecma6 export

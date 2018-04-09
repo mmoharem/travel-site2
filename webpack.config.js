@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 // module.exports = {
 //     entry: "./app/assets/javascript/App.js",
@@ -42,4 +42,4 @@ module.exports = {
             }
         ]
     }
-}
+};

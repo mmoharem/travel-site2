@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "scripts": {
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mmoharem/travel-site2.git"
