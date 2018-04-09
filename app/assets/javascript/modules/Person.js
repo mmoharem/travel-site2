@@ -1,10 +1,25 @@
-//.......................v2.0
+// //.......................v2.0
+//
+// function Person(fullName, favColor){
+//     this.name = fullName;
+//     this.favoriteColor = favColor;
+//     this.greet = function(){
+//         console.log("Hello my name is " + this.name + " and my favorite color is " + this.favoriteColor + ".");
+//     }
+// }
+//
+// module.exports = Person;
 
-function Person(fullName, favColor){
-    this.name = fullName;
-    this.favoriteColor = favColor;
-    this.greet = function(){
-        console.log("Hello my name is " + this.name + " and my favorite color is " + this.favoriteColor + ".");
+//.......................v3.0
+
+class Person {
+    constractor(fullName, favColor) {
+        this.name = fullName;
+        this.favoriteColor = favColor;
+    }
+
+    greet() {
+        console.log("Hi (using ec6) my name is " + this.name + " and my favorite color is " + this.favoriteColor + ".");
     }
 }
 

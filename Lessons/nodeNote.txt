@@ -120,3 +120,62 @@ by addin (var gulp(anyVareName) = require('gulp) )
  6- add {{..  module.exports = person;  ..}} in the persons.js files
 
  7- //run webpack $webpack
+
+ 8- to include //--JQUERY--// add the folowing code in the App.js
+  -    var $ = require('jquery');
+
+ ////....Integrating webpack into our existing Gulp automation.
+
+ 1- craet new file in gulp/tasks with name scripts.js
+ 2- add file <r>quire in the gulp.js
+ 3- add this code to script.js
+
+ var gulp = require('gulp'),
+ wbpack = require('webpack');
+
+         gulp.task('scripts', function(callback){
+             webpack(require('../../webpack.config.js'), function(){
+                 console.log("Hooray, webpack completed!");
+                 callback();
+             });
+         });
+
+4- got to /gulp/watch.js and add the following code
+
+watch('./app/assets/javascript/**/*.js', function(){
+    gulp.start('scripts');
+});
+
+5- to auto refresh browser got to /gulp/watch.js and change the code to
+
+        watch('./app/assets/javascript/**/*.js', function(){
+            gulp.start('scriptsRefresh');  /////....\\\\\
+        });
+
+6- then add the following new watch code
+
+            gulp.task('scriptsRefresh', ['scripts'], function(){ //add scripts as dependancy  to refresh after scripts file change.
+                browserSync.reload();
+            });
+
+7- then add error errorInfo
+
+//////////////........BABEL...........
+
+1- install babel which include 3 packages (babel-core, babel-loader, babel-preset-es2015)
+ - $npm install babel-core babel-loader babel-preset-es2015 --save-dev
+
+2- goto webpack.config. js and add te following modules
+
+        module: {
+            loaders: [
+                {
+                    loader: 'babel-loader',
+                    query: {
+                        presets: ['es2015']
+                    },
+                    test: /\.js$/,
+                    exclude: /node_modules/
+                }
+            ]
+        }

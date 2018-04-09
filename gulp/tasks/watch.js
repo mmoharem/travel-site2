@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 
 
 
-//...creat Gulp Watch...
+// ...creat Gulp Watch...
 
 gulp.task('watch', function() {
 
@@ -24,6 +24,8 @@ gulp.task('watch', function() {
         gulp.start('html');
         browserSync.reload();
     });
+
+
 
     // CSS-watch.
     watch(['./app/assets/css/main.css', './app/assets/css/_variables.css', './app/assets/css/_mixins.css'
@@ -39,10 +41,19 @@ gulp.task('watch', function() {
 
 });
 
+//....Creat Watch task for webpack javascript.
+    watch('./app/assets/javascript/App.js', function(){
+        gulp.start('scriptsRefresh');
+    });
 
 //...creat Gulp task for cssInject...
 
 gulp.task('cssInject', ['styles'], function(){
     return gulp.src('./app/temp/styles/main.css')
     .pipe(browserSync.stream());
+});
+
+
+gulp.task('scriptsRefresh', ['scripts'], function(){ //add scripts as dependancy  to refresh after scripts file change.
+    browserSync.reload();
 });
