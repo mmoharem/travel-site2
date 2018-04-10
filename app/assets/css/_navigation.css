@@ -1,22 +1,69 @@
 
 .primary-nav {
-    display: none;
+    position: relative;
+    transform: scale(1.2);
+    opacity: 0;
+    z-index: -10;
+    /* padding-top: 100px; */
+    transition: all .3s ease-out;
+
     @mixin atSmall {
         display: inline-block;
+        opacity: 1;
+        z-index: 1;
+        padding-top: 0;
+        transform: scale(1);
+
     }
     &__float-right {
         /* float: right; */
     }
 
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @mixin atSmall {
+            padding-top:0;
+            display: inline-block;
+        }
+    }
+
+
     li {
+        margin-bottom: 1rem;
         font-size: 1.4rem;
         list-style: none;
-        display: inline-block;
-        margin-right: 2rem;
+        @mixin atSmall {
+            margin-bottom: 0;
+            padding-right: 1.5rem;
+            display: inline-block;
+        }
     }
     a {
         color: #fff;
         text-decoration: none;
+    }
+    &--visible {
+        opacity: 1;
+        z-index: 1;
+        transform: scale(1);
+    }
+    &__btn {
+        opacity: 0;
+        transition: opacity .4s;
+        margin-bottom: 1rem;
+        @mixin atSmall {
+            opacity: 1;
+            margin-bottom: 0;
+        }
+        &--visible {
+            opacity: 1;
+
+            /* @mixin atSmall {
+                display: inline-block;
+            } */
+        }
     }
 
 }
