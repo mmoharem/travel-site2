@@ -32,7 +32,8 @@ gulp.task('watch', function() {
     , './app/assets/css/_global.css', './app/assets/css/_page-section.css', './app/assets/css/_wrapper.css'
     , './app/assets/css/_row.css', './app/assets/css/_typography.css', './app/assets/css/_btn.css'
     , './app/assets/css/_large-hero.css', './app/assets/css/_our-features.css', './app/assets/css/_testimonials.css'
-    , './app/assets/css/_sprite.css', './app/assets/css/_footer.css', './app/assets/css/_header.css', './app/assets/css/_navigation.css'], function() {
+    , './app/assets/css/_sprite.css', './app/assets/css/_footer.css', './app/assets/css/_header.css'
+    , './app/assets/css/_navigation.css', './app/assets/css/_reveal-item.css'], function() {
 
         // gulp.start('styles');
         gulp.start('cssInject');
@@ -42,7 +43,7 @@ gulp.task('watch', function() {
 });
 
 //....Creat Watch task for webpack javascript.
-    watch('./app/assets/javascript/App.js', function(){
+    watch(['./app/assets/javascript/App.js', './app/assets/javascript/moduls/MobileMenu.js', './app/assets/javascript/moduls/RevealOnScroll.js'], function(){
         gulp.start('scriptsRefresh');
     });
 
