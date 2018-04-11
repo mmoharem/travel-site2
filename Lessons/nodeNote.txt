@@ -179,3 +179,10 @@ watch('./app/assets/javascript/**/*.js', function(){
                 }
             ]
         }
+
+
+ ///////////////..........WAYPOINTS............
+
+ 1- $npm install waypoints --save-dev
+ 2- javascript files and import waypoint as jquery
+    (import waypoint from '../../../../node_modules/waypoints/lib/noframework.waypoints';)
